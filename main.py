@@ -58,7 +58,7 @@ def main():
             except ValueError as e:
                 print(f"Erro: {e}")
             except Exception as e:
-                print(f"Ocorreu um erro inesperado: {e}")
+                print(f"Erro inesperado: {e}")
         
         elif escolha == "2":
             conversoes = funcoes_sql.listar_conversoes()
@@ -67,13 +67,13 @@ def main():
                 for conversao in conversoes:
                     print(f"ID: {conversao[0]}, Número: {conversao[1]}, Origem: {conversao[2]}, Destino: {conversao[3]}, Resultado: {conversao[4]}")
             else:
-                print("Nenhum histórico de conversões encontrado.")
+                print("Nenhuma conversão encontrada no histórico.")
                 
         elif escolha == "3":
             funcoes_sql.limpar_historico()
 
         elif escolha == "4":
-            print("Saindo do programa. Até logo!")
+            print("Saindo do programa...")
             break
         
         else:

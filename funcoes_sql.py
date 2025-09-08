@@ -39,7 +39,7 @@ def adicionar_conversao(number, from_base, to_base, result):
             VALUES (?, ?, ?, ?)
         """, (number, from_base, to_base, result))
         conn.commit()
-        print("Conversão adicionada ao historico com sucesso.")
+        
     except sqlite3.Error as e:
         print(f"Erro ao adicionar conversão: {e}")
     finally:
