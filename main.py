@@ -1,6 +1,5 @@
 import funcoes_sql
 
-# Função convert_number (assumida da imagem)
 def conversao(number, from_base, to_base):
     # Converter número de entrada para decimal primeiro
     try:
@@ -10,17 +9,16 @@ def conversao(number, from_base, to_base):
     
     # Converter decimal para a base desejada
     if to_base == 2:
-        return bin(decimal)[2:]  # Remove prefixo '0b'
+        return bin(decimal)[2:]  
     elif to_base == 8:
-        return oct(decimal)[2:]  # Remove prefixo '0o'
+        return oct(decimal)[2:]  
     elif to_base == 10:
         return str(decimal)
     elif to_base == 16:
-        return hex(decimal)[2:].upper()  # Remove prefixo '0x' e usa maiúsculas
+        return hex(decimal)[2:].upper()
     else:
         return "Base de destino não suportada"
 
-# Função receber_numeros
 def receber_numeros():
     try:
         number = input("Digite o número a ser convertido: ")
@@ -36,7 +34,7 @@ def receber_numeros():
     except ValueError as e:
         raise ValueError("Por favor, insira entradas válidas.")
 
-# Função main
+
 def main():
     funcoes_sql.criar_tabela()  # Garante que a tabela exista antes de qualquer operação
     

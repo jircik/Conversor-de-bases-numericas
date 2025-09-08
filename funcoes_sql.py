@@ -1,6 +1,5 @@
 import sqlite3
 
-# Conectar ao banco
 def conectar_banco():
     try:
         return sqlite3.connect("hisoricoDeConversoes.db")
@@ -8,7 +7,6 @@ def conectar_banco():
         print(f"Erro ao conectar ao banco de dados: {e}")
         raise
 
-# Criar tabela
 def criar_tabela():
     conn = None
     try:
@@ -31,7 +29,6 @@ def criar_tabela():
         if conn:
             conn.close()
 
-# Adicionar conversão
 def adicionar_conversao(number, from_base, to_base, result):
     conn = None
     try:
@@ -49,14 +46,13 @@ def adicionar_conversao(number, from_base, to_base, result):
         if conn:
             conn.close()
 
-# Retornar (listar) conversões
 def listar_conversoes():
     conn = None
     try:
         conn = conectar_banco()
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM historico")
-        historico = cursor.fetchall()  # retorna lista de tuplas
+        historico = cursor.fetchall() 
         return historico
     except sqlite3.Error as e:
         print(f"Erro ao listar conversões: {e}")
