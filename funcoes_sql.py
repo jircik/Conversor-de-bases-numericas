@@ -83,3 +83,17 @@ def buscar_conversao_existente(number, from_base, to_base):
     finally:
         if conn:
             conn.close()
+
+def limpar_historico():
+    conn = None
+    try:
+        conn = conectar_banco()
+        cursor = conn.cursor()
+        cursor.execute("DELETE FROM historico")
+        conn.commit()
+        print("Histórico de conversões limpo com sucesso.")
+    except sqlite3.Error as e:
+        print(f"Erro ao limpar histórico: {e}")
+    finally:
+        if conn:
+            conn.close()

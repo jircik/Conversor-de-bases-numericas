@@ -44,8 +44,9 @@ def main():
         print("\n=== Menu Conversor de Bases ===")
         print("1. Converter um número")
         print("2. Listar todas as operações realizadas")
-        print("3. Sair")
-        escolha = input("Escolha uma opção (1-3): ")
+        print("3. Limpar histórico de conversões")
+        print("4. Sair")
+        escolha = input("Escolha uma opção (1-4): ")
         
         if escolha == "1":
             try:
@@ -69,8 +70,11 @@ def main():
                     print(f"ID: {conversao[0]}, Número: {conversao[1]}, Origem: {conversao[2]}, Destino: {conversao[3]}, Resultado: {conversao[4]}")
             else:
                 print("Nenhum histórico de conversões encontrado.")
-        
+                
         elif escolha == "3":
+            funcoes_sql.limpar_historico()
+
+        elif escolha == "4":
             print("Saindo do programa. Até logo!")
             break
         
