@@ -1,4 +1,61 @@
-"*.db" 
-"__pycache__/" 
-"*.pyc" 
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Testing
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.pytest_cache/
+
+# Packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Dependency directories
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtualenv
+bin/
+include/
+lib/
+lib64/
+share/
+pyvenv.cfg
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+
+# Project specific
+*.swp
+*~
