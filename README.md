@@ -1,6 +1,6 @@
 # Conversor de Bases Numéricas com Integração SQL
 
-Este projeto em Python realiza a conversão de números entre diferentes bases (binário, decimal, hexadecimal, etc.) e utiliza um banco de dados SQL para armazenar resultados já calculados.  
+Este projeto desenvolvido em Python realiza a conversão de números entre diferentes bases (binário, decimal, hexadecimal, etc.) e utiliza um banco de dados SQL para armazenar resultados já calculados.  
 Dessa forma, quando uma conversão já foi feita anteriormente, o programa busca diretamente no banco em vez de recalcular, otimizando a execução, além de disponibilizar um histórico de conversões ao usuário.
 
 ---
